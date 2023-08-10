@@ -1,6 +1,5 @@
 package com.example.newproject.House;
 import org.hibernate.ResourceClosedException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,8 +8,6 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class HouseController {
-
-    @Autowired
     private final HouseRepository houseRepo;
 
     public HouseController(HouseRepository houseRepo) {
@@ -24,7 +21,7 @@ public class HouseController {
 
     @GetMapping("/houses")
     public List<House> getHouses(){
-        return (List<House>) houseRepo.findAll();
+        return houseRepo.findAll();
     }
 
     @GetMapping("/houses/{id}")
