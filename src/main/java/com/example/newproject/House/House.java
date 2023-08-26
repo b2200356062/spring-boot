@@ -24,10 +24,19 @@ public class House{
     private String description;
     @Column(name="imagePath")
     private String imagePath;
+    @Column(name="manzara")
+    private String manzara;
 
     public House(){}
 
-    public House(Long id, String name, int price, String location, int yatak_sayisi, int metrekare, int banyo_sayisi, String description, String imagePath) {
+    public House(Long id, String name,
+                 int price,
+                 String location,
+                 int yatak_sayisi,
+                 int metrekare, int banyo_sayisi,
+                 String description,
+                 String imagePath,
+                 String manzara) {
         this.name = name;
         this.price = price;
         this.location = location;
@@ -37,6 +46,7 @@ public class House{
         this.metrekare = metrekare;
         this.description = description;
         this.imagePath = imagePath;
+        this.manzara = manzara;
     }
 
     public Long getId() {
@@ -109,6 +119,14 @@ public class House{
 
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
+    }
+
+    public String getManzara() {
+        return manzara;
+    }
+
+    public void setManzara(String manzara) {
+        this.manzara = manzara;
     }
 
     @Override
