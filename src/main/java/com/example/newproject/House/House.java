@@ -14,7 +14,7 @@ public class House{
     private int price;
     @Column(name = "location")
     private String location;
-    @Column(name = "yatak_sayisi")
+    @Column(name = "yatak_odasi_sayisi")
     private int yatak_sayisi;
     @Column(name = "metrekare")
     private int metrekare;

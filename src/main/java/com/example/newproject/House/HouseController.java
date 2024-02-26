@@ -15,8 +15,8 @@ public class HouseController {
     }
 
     @GetMapping("/")
-    public String helo(){
-        return "helo everynyan!";
+    public String hello(){
+        return "helo!";
     }
 
     @GetMapping("/houses")
